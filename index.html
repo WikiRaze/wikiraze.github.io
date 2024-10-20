@@ -3,6 +3,28 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'main main main main right right'
+    'footer footer footer footer footer footer';
+  gap: 0px;
+  background-color: # ;
+  padding: 0px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: px 0;
+  font-size: 17px;
+}
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -35,30 +57,44 @@ body {
 footer {
   text-align: center;
   padding: 3px;
-  background-color: #7f32a8;
+  background-color: #333;
   color: white;
+}
+
+footer a {
+  color: #c97ff0;
 }
 </style>
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-
-<div class="topnav">
+<div class="grid-container">
+  <div class="item1"><div class="topnav">
   <a class="active" href="#home"><img src="wikiraze_logo_white.png" alt="WikiRaze" height="15"></a>
   <a href="https://discord.com/invite/XH4cMz5ks2">Discord</a>
   <a href="https://linktr.ee/wikiraze">Mina konton</a>
   <a href="https://sgc.se">SGC</a>
-</div>
-
-<div style="padding-left:16px">
+</div></div>
+  <div class="item3" style="padding-left:16px">
   <h2>WikiRaze.se</h2>
   <p>Välkomna till min hemsida! :) 
   <br>Just nu finns inte så mycket här men det kommer snart bli mer!
   </p>
 </div>
-<footer>
+<div class="item4" style="padding-left:16px">
+  <h3>Mina länkar</h3>
+  <p>
+	<img src="symbol-twitter.svg" alt="Twitter" height="15"> <a href="https://x.com/WikiRaze" target="_blank">Twitter</a>
+	<br><img src="symbol-youtube.svg" alt="YouTube" height="15"> <a href="https://www.youtube.com/c/WikiRaze" target="_blank">YouTube</a>
+	<br><img src="symbol-twitch.svg" alt="Twitch" height="15"> <a href="https://www.twitch.tv/wikiraze" target="_blank">Twitch</a>
+	<br><img src="symbol-discord.svg" alt="Discord" height="15"> <a href="https://discord.com/invite/XH4cMz5ks2" target="_blank">Discordserver</a>
+	<br><img src="symbol-kofi.svg" alt="Ko-Fi" height="15"> <a href="https://ko-fi.com/laneochraze" target="_blank">Ko-Fi</a>
+</p>
+</div>
+<div class="item5"><footer>
   <p>Kontakt:<br>
   Discord: <a href="https://discordapp.com/users/286753300899168256">@wikiraze</a> </p>
-</footer>
+</footer></div>
+</div>
 </body>
 </html>
