@@ -7,9 +7,9 @@
 .grid-container {
   display: grid;
   grid-template-areas:
-    'header header header header header header'
-    'main main main main right right'
-    'footer footer footer footer footer footer';
+    'header header header header header'
+    'main main main main right'
+    'footer footer footer footer footer';
   gap: 0px;
   background-color: # ;
   padding: 0px;
